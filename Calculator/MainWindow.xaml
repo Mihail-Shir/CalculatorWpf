@@ -1,0 +1,64 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator" 
+        mc:Ignorable="d"
+        Title="Calculator" Height="400" Width="300">
+
+    
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Aquamarine"/>
+            <Setter Property="Foreground" Value="DarkRed"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Button Numbers-->
+        <Button x:Name="btn1" Margin="0" Grid.Column="0" Grid.Row="2" Click="btn1_Click">1</Button>
+        <Button x:Name="btn2" Margin="0" Grid.Column="1" Grid.Row="2" Click="btn1_Click">2</Button>
+        <Button x:Name="btn3" Margin="0" Grid.Column="2" Grid.Row="2" Click="btn1_Click">3</Button>
+        <Button x:Name="btn4" Margin="0" Grid.Column="0" Grid.Row="3" Click="btn1_Click">4</Button>
+        <Button x:Name="btn5" Margin="0" Grid.Column="1" Grid.Row="3" Click="btn1_Click">5</Button>
+        <Button x:Name="btn6" Margin="0" Grid.Column="2" Grid.Row="3" Click="btn1_Click">6</Button>
+        <Button x:Name="btn7" Margin="0" Grid.Column="0" Grid.Row="4" Click="btn1_Click">7</Button>
+        <Button x:Name="btn8" Margin="0" Grid.Column="1" Grid.Row="4" Click="btn1_Click">8</Button>
+        <Button x:Name="btn9" Margin="0" Grid.Column="2" Grid.Row="4" Click="btn1_Click">9</Button>
+        <Button x:Name="btn0" Margin="0" Grid.Column="1" Grid.Row="5" Click="btn1_Click">0</Button>
+
+        <!--Button MathOperations-->
+        <Button x:Name="btnEquals" Margin="0" Grid.Column="3" Grid.Row="1" Click="btnEquals_Click">=</Button>
+        <Button x:Name="btnPlus" Margin="0" Grid.Column="3" Grid.Row="2" Click="btnOperation_Click">+</Button>
+        <Button x:Name="btnMinus" Margin="0" Grid.Column="3" Grid.Row="3" Click="btnOperation_Click">-</Button>
+        <Button x:Name="btnDivide" Margin="0" Grid.Column="3" Grid.Row="4" Click="btnOperation_Click">/</Button>
+        <Button x:Name="btnTimes" Margin="0" Grid.Column="3" Grid.Row="5" Click="btnOperation_Click">*</Button>
+        <Button x:Name="btnQuadro" Margin="0" Grid.Column="2" Grid.Row="5" Click="btnQuadro_Click">^2</Button>
+        <Button x:Name="btnPercent" Margin="0" Grid.Column="0" Grid.Row="5" Click="btnPercent_Click" >%</Button>
+
+        <!--Button Clear-->
+        <Button x:Name="btnClearEntry" Margin="0" Grid.Column="0" Grid.Row="1" Click="btnClearEntry_Click">CE</Button>
+        <Button x:Name="btnClear" Margin="0" Grid.Column="1" Grid.Row="1" Click="btnClear_Click">ClearAll</Button>
+        <Button x:Name="btnBackSpace" Margin="0" Grid.Column="2" Grid.Row="1" Content="&lt;-Backspace" Click="btnBackSpace_Click"/>
+
+        <!--TextBox Display-->
+        <TextBox x:Name="txtDisplay" BorderThickness="0" IsReadOnly="True" TextAlignment="Right" VerticalAlignment="Center" FontSize="30" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+    </Grid>
+</Window>
